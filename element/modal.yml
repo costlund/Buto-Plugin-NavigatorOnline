@@ -1,0 +1,26 @@
+-
+  type: widget
+  data:
+    plugin: bootstrap/modal
+    method: modal
+    data:
+      id: md_navigator_online
+      title: Offline
+      btn_close: false
+      body:
+        -
+          type: p
+          innerHTML: It seems like you're offline.
+        -
+          type: p
+          attribute: 
+            class: alert alert-warning text-center
+          innerHTML: This window will close when your device got internet connection again!
+-
+  type: script
+  innerHTML: |
+    if(!window.navigator.onLine){
+      $('#md_navigator_online').modal({show: true, backdrop: 'static'});
+    }
+    window.addEventListener('online', () => $('#md_navigator_online').modal('hide'));
+    window.addEventListener('offline', () => $('#md_navigator_online').modal({show: true, backdrop: 'static'}));
