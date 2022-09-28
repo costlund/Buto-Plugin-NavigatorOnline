@@ -1,5 +1,9 @@
-version: 1.0.1
+version: 1.0.2
 history:
+  1.0.2:
+    date: '2022-09-28'
+    title: Versions
+    description: 'Versions update.'
   1.0.1:
     date: '2022-09-28'
     title: Versions
@@ -11,7 +15,7 @@ history:
 plugin:
   -
     name: bootstrap/modal
-    version: 1.1.0
+    version: 1.2.0
 sys:
   -
     name: mercury
