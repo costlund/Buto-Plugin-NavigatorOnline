@@ -1,5 +1,10 @@
 -
   type: widget
+  settings:
+    globals:
+      -
+        path_to_key: 'settings/plugin/i18n/translate_v1/settings/path'
+        value: '/plugin/navigator/online/i18n'
   data:
     plugin: bootstrap/modal
     method: modal
@@ -10,12 +15,16 @@
       body:
         -
           type: p
-          innerHTML: It seems like you're offline.
+          innerHTML: It seems like you are offline.
         -
           type: p
           attribute: 
             class: alert alert-warning text-center
-          innerHTML: This window will close when your device got internet connection again!
+            ondblclick: "$('#md_navigator_online').modal('hide')"
+          innerHTML:
+            -
+              type: small
+              innerHTML:  This window will close when your device got internet connection again!
 -
   type: script
   innerHTML: |

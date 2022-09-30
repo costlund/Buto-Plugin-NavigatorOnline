@@ -1,6 +1,5 @@
 # Buto-Plugin-NavigatorOnline
 Show a modal if browser detect offline mode. 
-
 - Show modal on page load if offline mode.
 - Toogle show/hide depending on offline mode via Javascript event.
 
@@ -12,3 +11,6 @@ data:
     plugin: navigator/online
     method: modal
 ```
+
+### Close modal
+One could close modal if double click on alert.
